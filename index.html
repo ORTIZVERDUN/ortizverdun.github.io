@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ortiz Verdún Propiedades</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #f4f4f4; }
+    header { background: #004aad; color: white; padding: 1rem; text-align: center; }
+    .gallery-container {
+      display: flex;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .gallery-container::-webkit-scrollbar { display: none; }
+    .gallery-item {
+      flex: none;
+      width: 80%;
+      margin: 1rem auto;
+      scroll-snap-align: center;
+      transition: transform 0.3s ease;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .property-info {
+      padding: 1rem;
+      background: white;
+      margin: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    form {
+      margin: 2rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ORTIZ VERDÚN  PROPIEDADES</h1>
+    <p>Martillero y Corredor Público - M.P. 298</p>
+  </header>
+
+  <div class="gallery-container">
+    <div class="gallery-item"><a href="https://ortizverdun1976.github.io/DUPLEX.html"><img src="CASA025.jpg" alt="Propiedad"></a></div>
+    <div class="gallery-item"><a href="https://ortizverdun1976.github.io/CASAJORGE.html"><img src="CASA026.jpg" alt="Propiedad"></a></div>
+    <div class="gallery-item"><a href="https://ortizverdun1976.github.io/TERRENOBIRAN.html"><img src="CASA027.jpg" alt="Propiedad"></a></div>
+    
+  </div>
+
+  <div class="property-info">
+    <h2>SI BUSCÁS CASA, DEPARTAMENTO, TERRENOS O UN CAMPO, NOSOTROS TE LO ENCONTRAMOS. NAVEGÁ POR NUESTRO SITIO Y CONTACTATE, ESTAMOS A TU SERVICIO!</h2>
+    
+  </div>
+
+
+  <a class="whatsapp" href="https://wa.me/5493794354869" target="_blank">✆</a>
+</body>
+</html>
