@@ -60,6 +60,27 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
+    #lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+    
   </style>
 </head>
 <body>
@@ -83,6 +104,11 @@
     
   </div>
 
+<!-- Lightbox contenedor oculto -->
+<div id="lightbox" style="display:none;" onclick="this.style.display='none'">
+  <img id="lightbox-img" src="" alt="Zoom" />
+</div>
+  
   <div class="property-info">
     <h2>CASA EN VENTA</h2>
     <p><strong>Ubicación:</strong> Barrio Apipé - Sobre calle Murcia – Corrientes Capital</p>
@@ -94,5 +120,16 @@
 
 
   <a class="whatsapp" href="https://wa.me/5493794354869" target="_blank">✆</a>
+
+<script>
+  // Agregar evento a todas las imágenes de galería
+  document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    });
+  });
+</script>
+  
 </body>
 </html>
