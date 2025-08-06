@@ -86,6 +86,27 @@
     
   </div>
 
-  <a class="whatsapp" href="intent://send/?phone=5493794354869#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end" target="_blank">✆</a>
+<a class="whatsapp" href="#" onclick="openWhatsApp(event)">✆</a>
+
+<script>
+  function openWhatsApp(event) {
+    event.preventDefault();
+
+    var userAgent = navigator.userAgent.toLowerCase();
+    var phone = "5493794354869";
+    var whatsappLink = "https://wa.me/" + phone;
+
+    // Detecta si está dentro de Facebook (incluyendo Facebook Lite o su navegador interno)
+    var isFacebook = userAgent.includes("fbav") || userAgent.includes("fban");
+
+    if (isFacebook) {
+      alert("Parece que estás usando Facebook o Facebook Lite.\nLamentablemente, este navegador no puede abrir WhatsApp directamente.\n\nPor favor, copiá este número:\n+54 9 379 435 4869\ny escribime desde la app de WhatsApp, o abrí este enlace en Chrome:\n\nhttps://wa.me/" + phone);
+    } else {
+      // Redirige normalmente
+      window.open(whatsappLink, '_blank');
+    }
+  }
+</script>
+
 </body>
 </html>
